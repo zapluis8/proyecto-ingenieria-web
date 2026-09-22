@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventarios</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+</head>
+
+<body onload="cargarInventario()">
+    <header>
+        <h1>Panel de inventarios</h1>
+        <nav><a href="/ventas-dia.html">Ventas del día</a><button onclick="cerrarSesion()">Cerrar sesión</button></nav>
+    </header>
+    <main>
+        <div class="panel"><input id="buscar" placeholder="Buscar producto" oninput="cargarInventario()">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Categoría</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

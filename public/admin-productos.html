@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Administrar productos</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+    <script src="/js/validaciones.js"></script>
+</head>
+
+<body onload="cargarAdminProductos()">
+    <header>
+        <h1>Productos</h1>
+        <nav><a href="/admin.html">Admin</a></nav>
+    </header>
+    <main>
+        <div class="panel">
+            <h2>Nuevo / editar producto</h2>
+            <form id="formProducto" onsubmit="event.preventDefault();guardarProducto()"><input type="hidden"
+                    id="idProducto">
+                <div class="form-grid"><input id="nombre" placeholder="Nombre"><input id="precio" type="number" min="0"
+                        step="0.01" placeholder="Precio"><input id="stock" type="number" min="0"
+                        placeholder="Stock"><select id="categoria"></select><input id="fecha"
+                        placeholder="Entrega aproximada, por ejemplo 3 a 5 días"></div>
+                <p id="mensaje"></p><button>Guardar producto</button>
+            </form>
+        </div>
+        <div class="panel">
+            <h2>Productos registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Categoría</th>
+                        <th>Entrega</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+        <div class="panel">
+            <h2>Imágenes</h2>
+            <p>Subir imagenes.</p><input id="imagenesProducto" type="file" multiple><input id="idImagenProducto"
+                type="number" placeholder="ID del producto"><button onclick="subirImagenAdmin()">Subir imágenes</button>
+            <p id="mensajeImagen"></p>
+        </div>
+    </main>
+    <script>async function subirImagenAdmin() { const id = document.getElementById('idImagenProducto').value; const f = document.getElementById('imagenesProducto').files; if (!id || !f.length) return alert('Indica producto y selecciona imágenes.'); const fd = new FormData(); fd.append('idProducto', id); for (const x of f) fd.append('imagenes', x); const r = await api('/api/imagenes', { method: 'POST', body: fd }); mostrar('mensajeImagen', r.error || 'Imágenes guardadas.', r.error ? 'error' : 'ok'); }</script>
+</body>
+
+</html>

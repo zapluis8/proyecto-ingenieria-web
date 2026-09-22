@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Categorías</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+</head>
+
+<body onload="cargarCategoriasAdmin()">
+    <header>
+        <h1>Categorías</h1>
+        <nav><a href="/admin.html">Admin</a></nav>
+    </header>
+    <main>
+        <div class="panel">
+            <h2>Nueva / editar categoría</h2>
+            <form id="formCategoria" onsubmit="event.preventDefault();guardarCategoria()"><input type="hidden"
+                    id="idCategoria"><input id="nombre" placeholder="Nombre de categoría"><button>Guardar</button>
+            </form>
+        </div>
+        <div class="panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

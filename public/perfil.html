@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mi perfil</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+</head>
+
+<body onload="cargarPerfil()">
+    <header>
+        <h1>Mi perfil</h1>
+        <nav><a href="/productos.html">Productos</a><a href="/pedido.html">Mis pedidos</a><button
+                onclick="cerrarSesion()">Cerrar sesión</button></nav>
+    </header>
+    <main>
+        <div class="grid">
+            <div class="panel">
+                <h2>Mis direcciones</h2>
+                <ul id="direcciones"></ul>
+                <h3>Nueva dirección</h3>
+                <div class="form-grid"><input id="calle" placeholder="Calle"><input id="numExt"
+                        placeholder="Número exterior"><input id="numInt" placeholder="Número interior"><input
+                        id="colonia" placeholder="Colonia"><input id="cp" placeholder="CP"><input id="municipio"
+                        placeholder="Municipio"><input id="ciudad" placeholder="Ciudad"><input id="pais"
+                        placeholder="País"></div><label><input type="checkbox" id="principalDir" style="width:auto">
+                    Hacer principal</label><button onclick="agregarDireccion()">Guardar dirección</button>
+            </div>
+            <div class="panel">
+                <h2>Mis métodos de pago</h2>
+                <ul id="pagos"></ul>
+                <h3>Nuevo método</h3><input id="titular" placeholder="Titular"><input id="tarjeta"
+                    placeholder="Número de tarjeta"><input id="vencimiento" placeholder="MM/AA"><input id="cvv"
+                    placeholder="CVV"><label><input type="checkbox" id="principalPago" style="width:auto"> Hacer
+                    principal</label><button onclick="agregarPago()">Guardar método</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

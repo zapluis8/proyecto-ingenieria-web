@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reportes</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+</head>
+
+<body onload="cargarReportes()">
+    <header>
+        <h1>Reporte de ventas</h1>
+        <nav><a href="/admin.html">Admin</a></nav>
+    </header>
+    <main>
+        <div class="panel">
+            <div class="form-grid"><select id="mes">
+                    <option value="">Todos los meses</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select><input id="dia" type="date"></div><button onclick="generarReporte()">Filtrar</button>
+            <h3 id="categoriaMasVendida"></h3>
+        </div>
+        <div class="panel">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pedido</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Estado</th>
+                        <th>Unidades</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla"></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+    <script src="/js/validaciones.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Registro de cliente</h1>
+        <nav><a href="/">Inicio</a><a href="/login.html">Login</a></nav>
+    </header>
+    <main>
+        <div class="panel">
+            <h2>Datos personales</h2>
+            <div class="form-grid"><input id="nombre" placeholder="Nombre(s)"><input id="apellidoP"
+                    placeholder="Apellido paterno"><input id="apellidoM" placeholder="Apellido materno"><input
+                    id="correo" placeholder="Correo"><input id="rfc" placeholder="RFC"><input id="curp"
+                    placeholder="CURP"><input id="password" type="password" placeholder="Contraseña"></div>
+            <p id="msg"></p>
+            <h2>Dirección principal</h2>
+            <div class="form-grid"><input id="calle" placeholder="Calle"><input id="numExt"
+                    placeholder="Número exterior"><input id="numInt" placeholder="Número interior"><input id="colonia"
+                    placeholder="Colonia"><input id="cp" placeholder="Código postal"><input id="municipio"
+                    placeholder="Municipio"><input id="ciudad" placeholder="Ciudad"><input id="pais" placeholder="País">
+            </div>
+            <h2>Método de pago principal</h2>
+            <div class="form-grid"><input id="titular" placeholder="Nombre del titular"><input id="tarjeta"
+                    placeholder="Número de tarjeta"><input id="vencimiento" placeholder="MM/AA"><input id="cvv"
+                    placeholder="CVV"></div>
+            <p id="mensaje"></p><button onclick="registrarUsuario()">Registrar cuenta</button>
+        </div>
+    </main>
+    <script>validarPassword('password', 'msg');</script>
+</body>
+
+</html>

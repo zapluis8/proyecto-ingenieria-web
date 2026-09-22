@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmar compra</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+</head>
+
+<body onload="cargarCheckout()">
+    <header>
+        <h1>Confirmar compra</h1>
+        <nav><a href="/carrito.html">Carrito</a></nav>
+    </header>
+    <main>
+        <div class="panel">
+            <h2>Dirección de envío</h2><select id="direccion"></select>
+            <h2>Método de pago</h2><select id="pago"></select>
+            <p id="mensaje"></p><button onclick="hacerPedido()">Confirmar pago y pedido</button>
+        </div>
+    </main>
+</body>
+
+</html>

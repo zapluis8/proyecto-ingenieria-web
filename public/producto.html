@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Producto</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <script src="/js/app.js"></script>
+</head>
+
+<body onload="cargarProducto()">
+    <header>
+        <h1>Detalle del producto</h1>
+        <nav><a href="/productos.html">Productos</a><a href="/carrito.html">Carrito</a></nav>
+    </header>
+    <main>
+        <div class="panel">
+            <h2 id="titulo"></h2><span id="categoria" class="tag"></span>
+            <p id="precio" class="precio"></p>
+            <p>Entrega: <span id="entrega"></span></p><img id="principal"
+                style="width:100%;max-width:450px;height:300px;object-fit:contain">
+            <div id="galeria"></div>
+            <hr>
+            <p id="promedio"></p>
+            <h3>Calificación y recomendación</h3>
+            <p>Solo puedes guardar una opinión si compraste el producto.</p><select id="estrellas">
+                <option value="5">5 estrellas</option>
+                <option value="4">4 estrellas</option>
+                <option value="3">3 estrellas</option>
+                <option value="2">2 estrellas</option>
+                <option value="1">1 estrella</option>
+                <option value="0">0 estrellas</option>
+            </select><textarea id="comentario" placeholder="Escribe tu recomendación"></textarea><input type="hidden"
+                id="idProducto"><button onclick="guardarOpinion()">Guardar opinión</button>
+            <h3>Recomendaciones</h3>
+            <div id="comentarios"></div>
+        </div>
+    </main>
+</body>
+
+</html>
