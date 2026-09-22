@@ -1,0 +1,267 @@
+/* Esto hace que los tamaños de los elementos sean más fáciles de controlar */
+* {
+  box-sizing: border-box;
+}
+
+/* Diseño general de la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+
+/* Parte de arriba de la página */
+header {
+  background: #172554;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Enlaces del menú */
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+/* Espacio principal donde va el contenido */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Parte principal de la página de inicio */
+.hero {
+  background: white;
+  padding: 45px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 5px 18px #0001;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #172554;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Estas clases sirven para hacer cuadros blancos */
+.panel,
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px #0001;
+  margin-bottom: 20px;
+}
+
+/* Aquí se acomodan varias cosas en forma de cuadritos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+/* Diseño de cada producto */
+.product-card {
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 4px 15px #0001;
+}
+
+/* Imagen de los productos */
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+/* Diseño de los campos de los formularios */
+input,
+select,
+button,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+/* Diseño normal de los botones */
+button {
+  background: #172554;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Cambia un poquito el botón cuando pasamos el mouse */
+button:hover {
+  opacity: 0.9;
+}
+
+/* Botones con diferentes colores */
+.btn-danger {
+  background: #b91c1c;
+}
+
+.btn-secondary {
+  background: #475569;
+}
+
+.btn-green {
+  background: #166534;
+}
+
+/* Acomoda los campos de un formulario */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+/* Caja donde mostramos mensajes */
+.mensaje {
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* Mensaje cuando algo sale mal */
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Mensaje cuando todo sale bien */
+.ok {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* Diseño de las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Encabezado de las tablas */
+th {
+  background: #e2e8f0;
+}
+
+/* Acomoda los botones de acciones */
+.acciones {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.acciones button {
+  width: auto;
+}
+
+/* Color de los enlaces */
+a {
+  color: #172554;
+}
+
+/* Sirve para esconder elementos */
+.oculto {
+  display: none;
+}
+
+/* Diseño de las estrellas de las opiniones */
+.stars {
+  font-size: 25px;
+  color: #eab308;
+  cursor: pointer;
+}
+
+/* Imágenes pequeñas */
+.mini-img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: cover;
+  margin: 4px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Parte de abajo de la página */
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+/* Centrar texto */
+.center {
+  text-align: center;
+}
+
+/* Diseño del precio de los productos */
+.precio {
+  font-size: 22px;
+  font-weight: bold;
+  color: #166534;
+}
+
+/* Etiquetas pequeñas, como las categorías */
+.tag {
+  display: inline-block;
+  background: #dbeafe;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Estos cambios hacen que la página se vea mejor en celulares */
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  main {
+    width: 94%;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}
